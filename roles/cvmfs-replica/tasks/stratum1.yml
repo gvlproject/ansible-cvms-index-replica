@@ -119,3 +119,8 @@
     weekday: 3
   with_indexed_items: "{{ cvmfs_repositories }}"
 
+- name: Copy cvmfs metadata file
+  template:
+    src: meta.json.j2
+    dest: /srv/cvmfs/info/v1/meta.json
+    backup: no

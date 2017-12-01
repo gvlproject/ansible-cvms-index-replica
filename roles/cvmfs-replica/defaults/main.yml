@@ -81,3 +81,8 @@ cvmfs_repositories:
       - CVMFS_AUTO_GC=false
 
 cvmfs_stratum1_apache_port: 8008
+
+# Meta data for cvmfs replica
+cvmfs_administrator: gvladmin
+cvmfs_support_email: help@gvl.org.au
+cvmfs_managing_org: gvl.org.au
