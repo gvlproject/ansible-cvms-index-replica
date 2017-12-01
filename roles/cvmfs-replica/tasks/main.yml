@@ -1,0 +1,4 @@
+
+- include: system.yml
+
+- include: stratum1.yml

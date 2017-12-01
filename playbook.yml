@@ -1,0 +1,20 @@
+---
+# file: cloud.yml
+#   Use this file to setup components required for the GVL
+
+# Before running roles inside this playbook, copy
+# ``inventory/hosts.sample`` as ``inventory/hosts`` and edit it
+# to provide info about your instance(s)
+
+# To deploy a cvmfs1 stratum server for galaxy, use this role via the following
+# command (make sure you provided an instance IP in ``inventory/hosts`` for
+# ``cvmfsstratum1servers`` host group):
+#
+#   % ansible-playbook -i inventory/hosts playbook.yml
+#     --extra-vars cvmfs_srv_device=/dev/vdc
+#
+- hosts: cvmfsstratum1servers
+  sudo: yes
+  roles:
+    - cvmfs-replica
+  tags: cvmfs-replica
